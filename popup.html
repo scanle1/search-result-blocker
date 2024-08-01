@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Result Blocker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Search Result Blocker</h1>
+    <div class="input-group">
+      <input type="text" id="newSite" placeholder="Enter website to block (e.g. csdn.net)">
+      <button id="addSite">Add Site</button>
+    </div>
+    <div class="blocked-sites">
+      <h2>Blocked Sites</h2>
+      <ul id="blockedSitesList"></ul>
+    </div>
+    <button id="manageUrls">Manage URLs</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

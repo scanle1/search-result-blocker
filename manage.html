@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Blocked URLs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="manage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Blocked URLs</h1>
+        <div class="input-group">
+            <textarea id="newSites" placeholder="Enter websites to block (one per line, e.g., example.com)"></textarea>
+            <button id="addSites" class="btn btn-primary"><i class="fas fa-plus"></i> Add Sites</button>
+        </div>
+        <div class="action-buttons">
+            <button id="deleteAll" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete All</button>
+            <button id="batchDelete" class="btn btn-warning"><i class="fas fa-edit"></i> Batch Delete</button>
+        </div>
+        <div class="blocked-sites">
+            <h2>Blocked Sites</h2>
+            <ul id="blockedSitesList"></ul>
+        </div>
+        <div id="batchDeleteActions" style="display: none;">
+            <button id="confirmBatchDelete" class="btn btn-danger"><i class="fas fa-check"></i> Confirm Delete</button>
+            <button id="cancelBatchDelete" class="btn btn-secondary"><i class="fas fa-times"></i> Cancel</button>
+        </div>
+    </div>
+    <script src="manage.js"></script>
+</body>
+</html>

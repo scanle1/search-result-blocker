@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Search Result Blocker",
+  "version": "1.6",
+  "description": "Block search results from specified websites on Google, Bing, and Baidu search pages.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://www.bing.com/*",
+    "*://www.baidu.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/search*",
+        "*://www.bing.com/search*",
+        "*://www.baidu.com/s*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["manage.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
